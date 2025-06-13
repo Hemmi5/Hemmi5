@@ -16,7 +16,7 @@
   </div>
 
   <p class="text-center mt-3">Electrical Engineering + MBA Student</p>
-  <p class="text-center">Contact: <span id="email">[hidden]</span> <button onclick="showhideEmail()" class="btn btn-sm btn-primary">Show Email</button></p>
+  <div id="email" onclick="showhideEmail()">Show my email</div>
 
   <h3>About Me</h3>
   <p>I am a student at ... (fill in your background, education, etc.)</p>
@@ -28,7 +28,14 @@
     <li>Business & Engineering Strategy</li>
   </ul>
 
+  <div id="digit-clock"></div>
+
+  <canvas id="analog-clock" width="150" height="150" style="background-color:#999"></canvas>
+
+
   <p><a href="waph.html">Learn more about the WAPH course and my projects →</a></p>
+
+  <a href="http://s01.flagcounter.com/more/DEGG"><img src="https://s01.flagcounter.com/count2/DEGG/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_10/viewers_0/labels_0/pageviews_0/flags_0/percent_0/" alt="Flag Counter" border="0"></a>
 
   <div id="welcome-message" class="alert alert-info mt-3"></div>
 </div>
@@ -37,5 +44,34 @@
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script src="email.js"></script>
 <script src="script.js"></script>
+<script type="text/javascript">
+	function displayTime(){
+		document.getElementById('digit-clock').innerHTML = "Current time:" + new Date();
+	}
+	setInterval(displayTime,500);
+</script>
+<script src="https://waph-phung.github.io/clock.js"></script>
+<script type="text/javascript">
+	var canvas = document.getElementById("analog-clock");
+	var ctx = canvas.getContext("2d");
+	var radius = canvas.height/2;
+	ctx.translate(radius,radius);
+	radius = radius * 0.90
+	setInterval(drawClock,1000);
+
+	function drawClock(){
+		drawFace(ctx,radius);
+		drawNumbers(ctx,radius);
+		drawTime(ctx,radius);
+	}
+</script>
+ <script type="text/javascript">
+  $.get("https://v2.jokeapi.dev/joke/Any?type=single",
+		function (result) {
+			console.log("From jokeAPI: " +JSON.stringify(result));
+			$("#response" ).html( "A programming joke of the day: " + result.joke);
+		}
+	);
+  </script>
 </body>
 </html>
