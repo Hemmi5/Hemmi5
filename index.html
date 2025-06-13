@@ -14,13 +14,11 @@
   <div class="text-center mb-3">
     <img src="images/headshot.jpg" alt="Headshot" class="rounded-circle" width="150" />
     <p class="mt-2">Electrical Engineering + MBA Student</p>
+    <div class="text-center mb-4">
+    	<p> 614-580-3275 </p><span id="email" style="cursor:pointer;" onclick="showhideEmail()">📧 Show my email</span>
+  	</div>
     <a href="https://www.linkedin.com/in/adam-hemmert-4a6162223/" target="_blank">LinkedIn Profile</a>
   </div>
-
-  <div class="text-center mb-4">
-    <span id="email" style="cursor:pointer;" onclick="showhideEmail()">📧 Show my email</span>
-  </div>
-
   <div class="card p-3 mb-3">
     <h3>About Me</h3>
     <p>I am an Electrical Engineering and MBA student at the University of Cincinnati with hands-on co-op experience in RF systems, automotive design, and embedded systems. I’m passionate about innovation and enjoy building electronics, woodworking, and playing golf.</p>
@@ -28,12 +26,42 @@
 
   <div class="card p-3 mb-3">
     <h3>Education</h3>
-    <p></p>
+    <p>Education University of Cincinnati, Cincinnati, Ohio, graduating May 2026, Bachelor of Science, Electrical Engineering, GPA 3.87 to date, Masters of Business & Administration, Ascend program, GPA 3.95, Hilliard Davidson High School, Hilliard, Ohio, graduated May 2021 , Top 10% of the graduating class with a GPA 4.4
+    </p>
   </div>
 
   <div class="card p-3 mb-3">
     <h3>Experience</h3>
-    <p></p>
+    <p>   	
+		GIRD systems, engineering co-op,						          August 2024 - December 2024
+
+		Performed hardware modifications, precision soldering, and comprehensive functional testing on 10+ advanced RF boards to meet operational standards.
+		Engineered a robust test automation program with an intuitive user interface, streamlining hardware validation processes and improving efficiency.
+
+		GIRD systems, engineering co-op, 							     January 2024 - April 2024
+
+		Assembled and tested 12+ radio units, including circuit board modifications, meeting specifications of government clients
+		Developed asynchronous logic in VHDL for a government-funded research project
+		Engineered a TCP network in C++ to enable remote control and automation of power supplies for in-house lab testing
+
+		American Honda - Auto Development Center, Engineer co-op, 			       May 2023 - August 2023
+
+		Designed, revised, and issued 10+  CATIA electrical harness drawings to ensure Honda suppliers had accurate specifications for manufacturing harnesses for new vehicle models
+		Conducted in-depth analysis of JD Power customer complaints and developed a proposal to improve vehicle electronic components and created a proposal to enhance customer education for a better user experience
+
+		American Honda - Anna Engine Plant, Line Support Controls Engineer co-op,        August 2022 - December 2022
+
+		Enhanced the user experience of the RFID reader to minimize manual effort in non-production and repair processes
+		Implemented a laser detection system to identify rocker arm jigs, boosting production run rate by ~10%, improving safety for line associates and protecting $100,000+ Fanuc Robots
+
+		Team Fishel, Underground Laborer,  							       May 2022 - August 2022
+
+		Delivered telecom services to enhance residents' internet access, gaining expertise in fiber installation, conduit setup, and landscape restoration, improving internet capabilities from 4 Gigs to 5 Gigs
+
+		American Honda - East Liberty Plant, Full-time Associate, 				       May 2021 - August 2021 
+
+		Inspected and repaired paint defects to ensure high-quality finishes on 800+ vehicles daily, collaborating with departments to address major issues and reduce costs
+    </p>
   </div>
 
   <div class="card p-3 mb-3">
@@ -44,6 +72,11 @@
       <li>Hardware: PLCs, microcontrollers, advanced soldering</li>
       <li>Web: Front-end development, Bootstrap, API integration</li>
     </ul>
+  </div>
+
+  <div class="card p-3 mb-3">
+    <h3>Projects and Intreset</h3>
+    <p></p>
   </div>
 
   <div class="card p-3 mb-3">
@@ -127,7 +160,7 @@
 
   function fetchJoke() {
     $.get("https://v2.jokeapi.dev/joke/Any?type=single", function(result) {
-      $("#response").html("A programming joke of the day: " + result.joke);
+      $("#response").html("A new joke every minute of the day: " + result.joke);
     });
   }
   fetchJoke();
