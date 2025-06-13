@@ -35,7 +35,7 @@
   <img src="images/headshot.jpg" alt="Headshot" class="rounded-circle" width="150" />
   <h1>Adam Hemmert</h1>
   <p>Electrical Engineering + MBA Student | 614-580-3275 | <span id="email" onclick="showhideEmail()">📧 Show my email</span></p>
-  <a href="https://www.linkedin.com/in/adam-hemmert-4a6162223/" class="text-white">LinkedIn Profile</a>
+  <a href="https://www.linkedin.com/in/adam-hemmert-4a6162223/" class="text-white" target="_blank">LinkedIn Profile</a>
 </header>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top shadow-sm">
@@ -120,7 +120,7 @@
 
     <div class="mt-3">
 	    <a href="http://s01.flagcounter.com/more/DEGG">
-	      <img src="https://s01.flagcounter.com/count2/DEGG/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_10/viewers_0/labels_0/pageviews_0/flags_0/percent_0/" alt="Flag Counter" border="0">More actions
+	      <img src="https://s01.flagcounter.com/count2/DEGG/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_10/viewers_0/labels_0/pageviews_0/flags_0/percent_0/" alt="Flag Counter" border="0">
 	    </a>
   	</div>
 
@@ -162,7 +162,7 @@
   }
   function fetchJoke() {
     $.get("https://v2.jokeapi.dev/joke/Any?type=single", function(result) {
-      $("#response").html("A joke of the day: " + result.joke);
+      $("#response").html("A new joke every minute of the day: " + result.joke);
     });
   }
   fetchJoke();
