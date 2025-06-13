@@ -37,6 +37,8 @@
 
   <a href="http://s01.flagcounter.com/more/DEGG"><img src="https://s01.flagcounter.com/count2/DEGG/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_10/viewers_0/labels_0/pageviews_0/flags_0/percent_0/" alt="Flag Counter" border="0"></a>
 
+  <div id="nasa" class="mt-4"></div>
+
   <div id="welcome-message" class="alert alert-info mt-3"></div>
 </div>
 
@@ -73,5 +75,19 @@
 		}
 	);
   </script>
+  <script>
+  	function loadNASAImage() {
+  const apiKey = 'CikxL5zTOhMExAIlL4TPI3xUgWHmjtzvwkaEa1iK';
+  fetch(`https://api.nasa.gov/planetary/apod?api_key=${apiKey}`)
+    .then(res => res.json())
+    .then(data => {
+      document.getElementById("nasa").innerHTML = `
+        <h4>${data.title}</h4>
+        <img src="${data.url}" class="img-fluid"/>
+        <p>${data.explanation}</p>
+      `;
+    });
+}
+</script>
 </body>
 </html>
