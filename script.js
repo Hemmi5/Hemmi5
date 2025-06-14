@@ -27,3 +27,13 @@ function getCookie(name) {
   }
   return "";
 }
+
+$(document).ready(function(){
+  $('#changeTheme').click(function(){
+    if ($('body').hasClass('theme-blue')) {
+      $('body').removeClass('theme-blue').addClass('theme-red');
+    } else {
+      $('body').removeClass('theme-red').addClass('theme-blue');
+    }
+  });
+});
