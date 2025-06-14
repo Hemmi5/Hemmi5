@@ -21,7 +21,6 @@ This project is a professional portfolio on a website hosted on GitHub Pages. It
 [Deployed Site](https://Hemmi5.github.io)
 [GitHub Repository](https://github.com/Hemmi5/Hemmi5.github.io)
 
----
 ## General Requirements
 
 ### a. Deploy Website with professional profile
@@ -30,7 +29,6 @@ I created a personal website using HTML, CSS, and Bootsrap on GitHub pages. The 
 ### b. Create waph.html
 I made a seperate course description page that provides an overview of the course and each lab and hackathon and individual projects. It is connected to the main page via a link.
 
----
 ## Non-technical Requirements
 
 ### a. Boostrap
@@ -39,7 +37,6 @@ In the main page I used a Bootstrap frameowrk to make my website visually appeal
 ### b. Page tracker
 At the bottom of the page I added in a Flag Counter to track visitors based on geographic locations.
 
----
 ## Technical Requirements
 
 ### a. jQuery for Clocks and Toggle
