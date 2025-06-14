@@ -29,7 +29,7 @@
     }
   </style>
 </head>
-<body onload="checkVisit(); loadNASAImage();">
+<body>
 
 <header class="text-center">
   <img src="images/headshot.jpg" alt="Headshot" class="rounded-circle" width="150" />
@@ -126,7 +126,12 @@
 
   </section>
 </div>
-
+<script>
+  window.onload = function(){
+    checkVisit();
+    loadNasaImage();
+  }
+</script>
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script src="email.js"></script>
 <script src="script.js"></script>
