@@ -1,12 +1,11 @@
 function checkVisit() {
-  const welcome = document.getElementById("welcome-message");
   const lastVisit = getCookie("lastVisit");
   const now = new Date().toLocaleString();
 
   if (!lastVisit) {
-    welcome.innerHTML = "Welcome to my homepage for the first time!";
+    alert("Welcome to my homepage for the first time!");
   } else {
-    welcome.innerHTML = "Welcome back! Your last visit was " + lastVisit;
+    alert("Welcome back! Your last visit was " + lastVisit);
   }
 
   setCookie("lastVisit", now, 365);
