@@ -171,5 +171,16 @@
   fetchJoke();
   setInterval(fetchJoke, 60000);
 </script>
+<script>
+  $(document).ready(function(){
+  const colors = ['#f0f8ff', '#fff8dc', '#e6f2ff', '#fefefe'];
+  let current = 0;
+
+  $('#changeTheme').click(function(){
+    current = (current + 1) % colors.length;
+    $('body').css('background-color', colors[current]);
+  });
+});
+</script>
 </body>
 </html>
